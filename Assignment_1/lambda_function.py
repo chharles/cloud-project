@@ -27,33 +27,59 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Welcome, you can say Hello or Help. Which would you like to try?"
-
+        speak_output = "Welcome to Group 8's Assignment 1 project. What can I help you with?"
+        response_text = "I can tell you who is on the team, What the name of the group is, and provide you options for the skill . Which would you like me to do for you?"
         return (
             handler_input.response_builder
                 .speak(speak_output)
-                .ask(speak_output)
+                .ask(response_text)
                 .response
         )
 
 
-class HelloWorldIntentHandler(AbstractRequestHandler):
+class WhoIsOnTeamIntentHandler(AbstractRequestHandler):
     """Handler for Hello World Intent."""
     def can_handle(self, handler_input):
         # type: (HandlerInput) -> bool
-        return ask_utils.is_intent_name("HelloWorldIntent")(handler_input)
+        return ask_utils.is_intent_name("WhoIsOnTeamIntent")(handler_input)
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Hello World!"
+        speak_output = "Group 8's team members are Brantley Webb, Charlie Harper, Hui Cao, Owen Van Beber, and Reagan Wiginton"
 
         return (
             handler_input.response_builder
                 .speak(speak_output)
-                # .ask("add a reprompt if you want to keep the session open for the user to respond")
                 .response
         )
 
+
+class GroupNameIntentHandler(AbstractRequestHandler):
+    
+    def can_handle(self, handler_input):
+        return ask_utils.is_intent_name("GroupNameIntent")(handler_input)
+
+    def handle(self, handler_input):
+        speak_output = "The name of this group is Group 8"
+        return (
+            handler_input.response_builder
+                .speak(speak_output)
+                .response
+        )
+
+class OptionsIntentHandler(AbstractRequestHandler):
+    
+    def can_handle(self, handler_input):
+        return ask_utils.is_intent_name("OptionsIntent")(handler_input)
+
+    def handle(self, handler_input):
+        speak_output = "I can tell you who is on the team, What the name of the group is, and provide options for the skill. Which would you like me to do for you?"
+        
+        return (
+            handler_input.response_builder
+                .speak(speak_output)
+                .response
+        )
 
 class HelpIntentHandler(AbstractRequestHandler):
     """Handler for Help Intent."""
@@ -158,7 +184,10 @@ class CatchAllExceptionHandler(AbstractExceptionHandler):
 sb = SkillBuilder()
 
 sb.add_request_handler(LaunchRequestHandler())
-sb.add_request_handler(HelloWorldIntentHandler())
+sb.add_request_handler(WhoIsOnTeamIntentHandler())
+sb.add_request_handler(GroupNameIntentHandler())
+sb.add_request_handler(OptionsIntentHandler())
+
 sb.add_request_handler(HelpIntentHandler())
 sb.add_request_handler(CancelOrStopIntentHandler())
 sb.add_request_handler(SessionEndedRequestHandler())
