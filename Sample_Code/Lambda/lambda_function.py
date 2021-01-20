@@ -36,7 +36,6 @@ class LaunchRequestHandler(AbstractRequestHandler):
                 .response
         )
 
-
 class HelloWorldIntentHandler(AbstractRequestHandler):
     """Handler for Hello World Intent."""
     def can_handle(self, handler_input):
