@@ -1,0 +1,82 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "cloud project",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "WhoIsOnTeamIntent",
+                    "slots": [],
+                    "samples": [
+                        "for group members",
+                        "tell me who is in group eight",
+                        "group members",
+                        "who is in group eight",
+                        "tell me the group members",
+                        "tell me who the members of group are",
+                        "who are the member of group eight",
+                        "members of group eight"
+                    ]
+                },
+                {
+                    "name": "GroupNameIntent",
+                    "slots": [],
+                    "samples": [
+                        "for the group name",
+                        "for group name",
+                        "name group",
+                        "name of the group",
+                        "groups name",
+                        "name",
+                        "group name",
+                        "What is the name of the group"
+                    ]
+                },
+                {
+                    "name": "OptionsIntent",
+                    "slots": [],
+                    "samples": [
+                        "for the options",
+                        "for options",
+                        "options",
+                        "what are the options",
+                        "show me the options",
+                        "the options",
+                        "what can I do",
+                        "what do"
+                    ]
+                },
+                {
+                    "name": "ClassInformationIntent",
+                    "slots": [],
+                    "samples": [
+                        "about class information",
+                        "what was this project made for",
+                        "information about class project",
+                        "information about project",
+                        "class",
+                        "class information",
+                        "Tell me about the class project",
+                        "Tell me about the class"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
