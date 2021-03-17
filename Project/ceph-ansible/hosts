@@ -1,0 +1,17 @@
+[mons]
+controller
+
+[mgrs]
+controller
+
+[mdss]
+controller
+
+[rgws]
+controller
+
+[osds]
+storage devices="['/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_e0628122-562c-4a86-beb1-17347e964f8e','/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_4e427311-c961-4740-ae31-2ad89f79cc68','/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_e044a28f-f89c-44c6-89c5-e962584e929c','/dev/disk/by-id/scsi-SQEMU_QEMU_HARDDISK_8ec450ed-ee13-4e0f-aa5b-e3489ca129bb']"
+
+[grafana-server]
+controller
