@@ -20,3 +20,4 @@ credentials.txt
 .env
 .params
 .idea
+.DS_store
